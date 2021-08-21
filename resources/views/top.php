@@ -8,6 +8,7 @@
     <style type="text/css">
       .st1{opacity:1;fill:none;stroke:#fff;stroke-width:25.5118;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
   </head>
 
   <body>
@@ -33,8 +34,8 @@
       
       <h2>This is a automatic scoring site.</h2>
       <div class="login-button">
-        <button type="button" name="message" onclick="location.href='./login.php'">Login</button>
-    </div>
+        <button type="button" name="message" onclick="location.href='./login_form.php'">Login</button>
+      </div>
     </div>
 
     
