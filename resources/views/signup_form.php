@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once '../../functions.php';
+require_once '../../config/functions.php';
 require_once '../../config/UserLogic.php';
 
 $result = UserLogic::checkLogin();
