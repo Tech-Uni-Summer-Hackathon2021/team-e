@@ -17,7 +17,7 @@ class UserLogic
 
         // ユーザデータを配列に入れる
         $arr = [];
-        $arr[] = $userData['username'];
+        $arr[] = str_repeat('あ', '64');
         $arr[] = $userData['email'];
         $arr[] = password_hash($userData['password'], PASSWORD_DEFAULT);
 
@@ -26,6 +26,7 @@ class UserLogic
             $result = $stm->execute($arr);
             return $result;
         } catch(\Exception $e) {
+            echo $e;
             return $result;
         }
     }
@@ -64,7 +65,7 @@ class UserLogic
     /**
      * emailからユーザを取得
      * @param string $email
-     * @return bool|array $user|false
+     * @return array|bool $user|false
      */
     public static function getUserByEmail($email)
     {
@@ -85,7 +86,7 @@ class UserLogic
             $user = $stmt->fetch();
             return $user;
         } catch(\Exception $e) {
-            return $result;
+            return false;
         }
     }
 

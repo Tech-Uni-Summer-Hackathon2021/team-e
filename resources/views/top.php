@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Tech.uni_automatic scoring</title>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
     <link href="../../public/css/styles.css" rel="stylesheet">
     <link href="../../public/css/top.css" rel="stylesheet">
     <style type="text/css">
@@ -34,7 +35,7 @@
       <h2>This is a automatic scoring site.</h2>
       <div class="login-button">
         <button type="button" name="message" onclick="location.href='./login.php'">Login</button>
-    </div>
+      </div>
     </div>
 
     

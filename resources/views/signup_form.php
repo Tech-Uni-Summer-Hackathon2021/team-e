@@ -17,38 +17,41 @@ unset($_SESSION['login_err']);
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
+    <link href="../../public/css/styles.css" rel="stylesheet">
+    <link href="../../public/css/signup_form.css" rel="stylesheet">
     <title>ユーザ登録画面</title>
 </head>
 <body>
-    <h2>ユーザ登録フォーム</h2>
     <?php if (isset($login_err)) : ?>
         <p><?php echo $login_err; ?></p>
     <?php endif; ?>
+    <div class="contents">
         <form action="register.php" method="POST">
             <p>
-                <label for="username">ユーザ名:</label>
+                <label for="username">ユーザー名</label>
                 <input type="text" name="username">
             </p>
             <p>
-                <label for="username">メールアドレス:</label>
-                <input type="text" name="email">
+                <label for="email">メールアドレス</label>
+                <input type="email" name="email">
             </p>
             <p>
-                <label for="username">パスワード:</label>
-                <input type="text" name="password">
+                <label for="password">パスワード</label>
+                <input type="password" name="password">
             </p>
             <p>
-                <label for="username">パスワード確認:</label>
-                <input type="text" name="password_conf">
+                <label for="password_conf">パスワード確認</label>
+                <input type="password" name="password_conf">
             </p>
             <input type="hidden" name="csrf_token" value="<?php echo h(setToken()); ?>">
-            <p>
-                <input type="submit" value="新規登録">
-            </p>
-            <a href="login_form.php">ログインする</a>
-        </form>
+            <div class="signup-button">
+                    <button type="submit" name="message" onclick="location.href='./register.php'">新規登録</button>
+            </div>
+            <div class="login"><a href="login_form.php">ログインはこちら</a></div>
+            </form>
+    </div>
     
 </body>
 </html>
