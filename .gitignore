@@ -16,3 +16,6 @@ yarn-error.log
 /config/env.php
 /config/dbconnect.php
 /config/database.php
+/resources/views/user_profile.php
+/resources/views/edit_user_profile.php
+/resources/views/update_user_profile.php

@@ -14,7 +14,7 @@ if (!isset($_SESSION['csrf_token']) || $token !== $_SESSION['csrf_token']) {
 unset($_SESSION['csrf_token']);
 
 // バリデーション
-if(!$name = filter_input(INPUT_POST, 'name')) {
+if(!$name = filter_input(INPUT_POST, 'username')) {
     $err[] = 'ユーザ名を記入してください。';
 }
 if(!$email = filter_input(INPUT_POST, 'email')) {

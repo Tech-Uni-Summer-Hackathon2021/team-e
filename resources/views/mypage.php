@@ -32,7 +32,7 @@ if (!$result) {
       <nav>
         <ul class="main-nav">
             <li><a href="problem_list.blade.php">問題一覧</a></li>
-            <li><a href="profile.php">プロフィール</a></li>
+            <li><a href="user_profile.php">プロフィール</a></li>
             <li>
                 <form action="logout.php" method="POST">
                     <input type="submit" name="logout" value="ログアウト">
