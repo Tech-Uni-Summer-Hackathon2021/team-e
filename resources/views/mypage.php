@@ -13,7 +13,6 @@ if (!$result) {
     return;
 }
 
-$login_user = $_SESSION['login_user'];
 
 ?>
 
@@ -29,10 +28,11 @@ $login_user = $_SESSION['login_user'];
 </head>
 <body>
     <header class="page-header">
-      <h1><a href="hello.blade.php"><img class="logo" src="../images/logo.png"></a></h1>
+      <h1><a href="mypage.php"><img class="logo" src="../images/logo.png"></a></h1>
       <nav>
         <ul class="main-nav">
             <li><a href="problem_list.blade.php">問題一覧</a></li>
+            <li><a href="profile.php">プロフィール</a></li>
             <li>
                 <form action="logout.php" method="POST">
                     <input type="submit" name="logout" value="ログアウト">
@@ -43,7 +43,5 @@ $login_user = $_SESSION['login_user'];
     </header>
 
     <h2>マイページ</h2>
-        <p>ログインユーザ：<?php echo h($login_user['name']) ?></p>
-        <p>メールアドレス：<?php echo h($login_user['email']) ?></p>
 </body>
 </html>
