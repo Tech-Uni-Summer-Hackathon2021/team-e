@@ -50,7 +50,7 @@ unset($_SESSION['login_err']);
                     <button type="submit" name="message" onclick="location.href='./register.php'">新規登録</button>
             </div>
             <div class="login"><a href="login_form.php">ログインはこちら</a></div>
-            </form>
+        </form>
     </div>
     
 </body>
