@@ -25,7 +25,7 @@ $result = UserLogic::login($email, $password);
 
 if($result) {
     // そのままマイページへ
-    header('Location: mypage.php');
+    header("Location: mypage.php");
     return;
 }
 // ログイン失敗時の処理

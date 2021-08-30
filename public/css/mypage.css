@@ -3,6 +3,8 @@
 body {
     font-family: 'M PLUS Rounded 1c', sans-serif;
 }
+/* HEADER
+---------------------------------------------------- */
 img {
     max-width: 100%;
 }
@@ -25,13 +27,13 @@ img {
     color: #9CBFBB;
 }
 
-input {
+.main-nav input {
     background-color: #fff;
     border: none;
     outline: none;
     font-size: 1.25rem;
 }
-input:hover {
+.main-nav input:hover {
     color: #9CBFBB;
 }
 

@@ -1,13 +1,21 @@
 <?php 
 
+session_start();
+
+require_once '../../config/env.php';
+
 try {
 
-    $user =  "team-e";
-    $password = "SYr3x8XLZCOLxx*k";
+    $host = DB_HOST;
+    $db = DB_NAME;
+    $user = DB_USER;
+    $pass = DB_PASS;
+
+    $dsn = "mysql:host=$host;dbname=$db;charset=utf8mb4";
     $pdo_options = [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
     ];
-    $dbh = new PDO("mysql:host=localhost;dbname=team-e;charaset=utf8mb4", $user, $password, $pdo_options); 
+    $dbh = new PDO($dsn, $user, $pass, $pdo_options); 
     $dbh->beginTransaction();      
     $stmt = $dbh->prepare('UPDATE users SET name=:name, email=:email, password=:password WHERE id=:id');
 
@@ -55,30 +63,18 @@ try {
     <title>プロフィール更新完了</title>
 </head>
 <body>
-    <header class="page-header">
-      <h1><a href="mypage.php"><img class="logo" src="../images/logo.png"></a></h1>
-      <nav>
-        <ul class="main-nav">
-            <li><a href="problem_list.blade.php">問題一覧</a></li>
-            <li><a href="profile.php">プロフィール</a></li>
-            <li>
-                <form action="logout.php" method="POST">
-                    <input type="submit" name="logout" value="ログアウト">
-                </form>
-            </li>
-        </ul>
-       </nav>
-    </header>
 
     <main class="contents wrapper">
         <?php if (count($err) > 0) : ?>
             <?php foreach($err as $e) : ?>
                 <p><?php echo $e ?></p>
             <?php endforeach ?>
-            <p><a href="profile.php">やり直す</a></p>
+            <p><a href="user_profile.php">やり直す</a></p>
         <?php else : ?>
             <h2>プロフィール更新完了</h2>
-            <p><a href="mypage.php">マイページへ</a></p>
+            <form action="logout.php" method="POST">
+                <input type="submit" name="logout" value="ログアウトしてください">
+            </form>
         <?php endif?>
             
     </main>

@@ -1,6 +1,8 @@
 <?php 
 
 session_start();
+$session_id = session_id();
+require_once '../../config/dbconnect.php';
 require_once '../../config/UserLogic.php';
 require_once '../../config/functions.php';
 
@@ -12,7 +14,7 @@ if (!$result) {
     header('Location: signup_form.php');
     return;
 }
-
+$login_user = $_SESSION['login_user'];
 
 ?>
 
@@ -28,7 +30,7 @@ if (!$result) {
 </head>
 <body>
     <header class="page-header">
-      <h1><a href="mypage.php"><img class="logo" src="../images/logo.png"></a></h1>
+    <h1><a href="mypage.php"><img class="logo" src="../images/logo.png"></a></h1>
       <nav>
         <ul class="main-nav">
             <li><a href="problem_list.blade.php">問題一覧</a></li>
@@ -43,5 +45,12 @@ if (!$result) {
     </header>
 
     <h2>マイページ</h2>
+    <p>ユーザー名：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <?php echo h($login_user['name']); ?></p>
+        <p>メールアドレス：&nbsp;
+            <?php echo h($login_user['email']); ?></p>
+            <p>パスワード：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;********
+            <?php $login_user['password'] ?>
+        </p>
 </body>
 </html>

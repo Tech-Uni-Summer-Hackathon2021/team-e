@@ -2,25 +2,19 @@
 
 session_start();
 $session_id = session_id();
+require_once '../../config/env.php';
+require_once '../../config/UserLogic.php';
+require_once '../../config/functions.php';
 
-try {
+// ログインしているか判定し、していなかったら新規登録画面へ返す
+$result = UserLogic::checkLogin();
 
-    $user =  "team-e";
-    $password = "SYr3x8XLZCOLxx*k";
-    $pdo_options = [
-        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-    ];
-    $dbh = new PDO("mysql:host=localhost;dbname=team-e;charaset=utf8mb4", $user, $password, $pdo_options);       
-
-    $stmt = $dbh->query('SELECT * FROM users');
-
-    $result = 0;
-
-    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-} catch (Exception $e) {
-        echo 'エラーが発生しました。:' . $e->getMessage();
+if (!$result) {
+    $_SESSION['login_err'] = 'ユーザを登録してログインしてください！';
+    header('Location: signup_form.php');
+    return;
 }
+$login_user = $_SESSION['login_user'];
 
 ?>
 
@@ -36,11 +30,11 @@ try {
 </head>
 <body>
     <header class="page-header">
-      <h1><a href="mypage.php"><img class="logo" src="../images/logo.png"></a></h1>
+    <h1><a href="mypage.php"><img class="logo" src="../images/logo.png"></a></h1>
       <nav>
         <ul class="main-nav">
             <li><a href="problem_list.blade.php">問題一覧</a></li>
-            <li><a href="profile.php">プロフィール</a></li>
+            <li><a href="user_profile.php">プロフィール</a></li>
             <li>
                 <form action="logout.php" method="POST">
                     <input type="submit" name="logout" value="ログアウト">
@@ -52,17 +46,14 @@ try {
 
     <main class="contents wrapper">
         <h2>プロフィール</h2>
-            <?php foreach ($result as $user): ?>
         <p>ユーザー名：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <?php echo $user['name'] ?></p>
+            <?php echo h($login_user['name']); ?></p>
         <p>メールアドレス：&nbsp;
-            <?php echo $user['email'] ?></p>
-            <p>パスワード：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;********
-            <?php $user['password'] ?>
+            <?php echo h($login_user['email']); ?></p>
+        <p>パスワード：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;********
         </p>
         <div class="change-button">
-            <?php echo "<a href=edit_profile.php?id=" . $user["id"] . ">編集する</a>"; ?>
-            <?php endforeach; ?>
+            <a href="edit_user_profile.php">編集する</a>
         </div>
     </main>
     

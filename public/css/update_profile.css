@@ -4,48 +4,6 @@ body {
     font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
-/* HEADER
----------------------------------------------------- */
-img {
-    max-width: 100%;
-}
-
-.logo {
-    width: 160px;
-}
-
-.main-nav {
-    display: flex;
-    font-size: 1.25rem;
-    margin-top: 70px;
-    list-style: none;
-    
-}
-.main-nav li {
-    margin-left: 36px;
-}
-.main-nav a:hover {
-    color: #9CBFBB;
-}
-
-.main-nav input {
-    background-color: #fff;
-    border: none;
-    outline: none;
-    font-size: 1.25rem;
-}
-.main-nav input:hover {
-    color: #9CBFBB;
-}
-
-.page-header {
-   display: flex; 
-   justify-content: space-between;
-   margin-left: 20px;
-   margin-right: 60px;
-   border-bottom: 1px gray solid;
-}
-
 /* CONTENTS
 ----------------------------------------------- */
 .wrapper {
@@ -68,4 +26,13 @@ img {
 .contents a {
     border-bottom: black;
     text-decoration: underline;
+}
+
+input {
+    border: none;
+    outline: none;
+    background-color: #fff;
+    text-decoration: underline;
+    font-size: 1.125rem;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
 }
