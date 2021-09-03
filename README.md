@@ -31,7 +31,14 @@ Tech.Uni中級者クラスの問題に対する解答を自動採点します。
 ![スクリーンショット 2021-09-03 問題一覧](https://user-images.githubusercontent.com/70137236/131972761-99eb621d-5895-4fa1-ace7-6b408c21ef26.png)
 
 
-![スクリーンショット 2021-09-03 問題](https://user-images.githubusercontent.com/70137236/131972769-be27e18e-843a-47bd-a118-06e22c370ff6.png)![スクリーンショット 2021-09-03 結果](https://user-images.githubusercontent.com/70137236/131972896-71fade97-e678-4d20-aeb9-3733138512ed.png)
+![スクリーンショット 2021-09-03 問題](https://user-images.githubusercontent.com/70137236/131972769-be27e18e-843a-47bd-a118-06e22c370ff6.png)
+
+
+![スクリーンショット 2021-09-03 結果](https://user-images.githubusercontent.com/70137236/131972896-71fade97-e678-4d20-aeb9-3733138512ed.png)
+
+
+![スクリーンショット 2021-09-03 結果1](https://user-images.githubusercontent.com/70137236/131979768-acc29ca2-9d9b-42fb-a085-6acad899c125.png)
+
 
 
 ![スクリーンショット 2021-09-03 成績1](https://user-images.githubusercontent.com/70137236/131972912-0df7b90e-e41b-4d72-99ea-076079af11b8.png)
