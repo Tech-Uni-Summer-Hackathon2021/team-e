@@ -11,7 +11,7 @@ Tech.Uni中級者クラスの問題に対する解答を自動採点します。
 ## 使用技術
 * Front-end:PHP,Blade(Laravel)
 * Back-end :C,Shell
-* Os       :Linux
+* Os       :Linux(Ubuntu 20.04)
 * Database :Mysql
 ## UI
 ![スクリーンショット 2021-09-03 home画面](https://user-images.githubusercontent.com/70137236/131972678-64cedaa5-0765-4eb3-9ca3-800bd6914ace.png)
