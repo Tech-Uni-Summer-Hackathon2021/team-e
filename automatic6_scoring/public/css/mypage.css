@@ -1,0 +1,68 @@
+@charset "UFT-8";
+
+body {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+/* HEADER
+---------------------------------------------------- */
+img {
+    max-width: 100%;
+}
+
+.logo {
+    width: 160px;
+}
+
+.main-nav {
+    display: flex;
+    font-size: 1.25rem;
+    margin-top: 70px;
+    list-style: none;
+
+}
+.main-nav li {
+    margin-left: 36px;
+}
+.main-nav a{
+  color: black;
+}
+.main-nav a:hover {
+    color: #9CBFBB;
+}
+
+
+
+.page-header {
+   display: flex;
+   justify-content: space-between;
+   margin-left: 20px;
+   margin-right: 60px;
+   border-bottom: 1px gray solid;
+}
+.body-set{
+
+
+}
+
+.body-left{
+  margin-top: 80px;
+  margin-bottom: 50px;
+  float: left;
+}
+.body-right{
+  margin-bottom: 50px;
+  margin-top: 80px;
+  float: left;
+}
+
+.body-left li{
+  text-align: right;
+  list-style:none;
+  margin: 10px 0;
+  font-size: 24px;
+}
+.body-right li{
+  list-style:none;
+  font-size: 24px;
+  margin: 10px 0;
+}
