@@ -36,4 +36,22 @@ Tech.Uni中級者クラスの問題に対する解答を自動採点します。
 
 ![スクリーンショット 2021-09-03 成績1](https://user-images.githubusercontent.com/70137236/131972912-0df7b90e-e41b-4d72-99ea-076079af11b8.png)
 
+## 参考資料
 
+https://atcoder.jp/
+
+https://oswald.hatenablog.com/entry/20081208/1228697674
+
+https://laraweb.net/tutorial/2633/
+
+https://www.creatology.jp/unix/outin.html
+
+https://mrkmyki.com/%e9%80%86%e5%bc%95%e3%81%8dlaravel/laravel%e3%81%a7%e3%83%ad%e3%82%b0%e3%82%a4%e3%83%b3%e4%b8%ad%e3%81%ae%e3%83%a6%e3%83%bc%e3%82%b6%e3%83%bc%e3%81%ae%e6%83%85%e5%a0%b1%e3%82%92%e5%8f%96%e5%be%97%e3%81%99%e3%82%8b
+
+https://stackoverflow.com/questions/11990708/error-cant-connect-to-local-mysql-server-through-socket-var-run-mysqld-mysq
+
+https://teratail.com/questions/42102
+
+https://dixq.net/forum/viewtopic.php?t=20696
+
+https://dixq.net/forum/viewtopic.php?t=20696
