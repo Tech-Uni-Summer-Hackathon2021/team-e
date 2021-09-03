@@ -69,5 +69,3 @@ https://stackoverflow.com/questions/11990708/error-cant-connect-to-local-mysql-s
 https://teratail.com/questions/42102
 
 https://dixq.net/forum/viewtopic.php?t=20696
-
-https://dixq.net/forum/viewtopic.php?t=20696
