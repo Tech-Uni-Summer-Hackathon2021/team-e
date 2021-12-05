@@ -10,7 +10,7 @@
 Tech.Uni中級者クラスの問題に対する解答を自動採点します。提出すると自動採点し、すぐに結果が出力されます。
 ## 使用技術
 * Front-end:PHP,Blade(Laravel)
-* Back-end :C,Shell
+* Back-end :C++,Shell
 * Os       :Linux(Ubuntu 20.04)
 * Database :Mysql
 ## UI
